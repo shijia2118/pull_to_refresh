@@ -391,7 +391,7 @@ class SmartRefresherState extends State<SmartRefresher> {
         // ignore: DEPRECATED_MEMBER_USE_FROM_SAME_PACKAGE
         widget.controller.scrollController = scrollController ??
             childView.controller ??
-            (childView.primary ? PrimaryScrollController.of(context) : null);
+            (childView.primary == true ? PrimaryScrollController.of(context) : null);
       } else {
         // ignore: DEPRECATED_MEMBER_USE_FROM_SAME_PACKAGE
         widget.controller.scrollController = PrimaryScrollController.of(context);
